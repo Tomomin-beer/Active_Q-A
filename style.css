@@ -1,48 +1,59 @@
+/* 基本スタイル */
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 20px;
-    background-color: #F9D423; /* ロゴに近い黄色 */
-}
-
-.logo {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.logo img {
-    max-width: 300px; /* ロゴの最大幅を300pxに制限 */
-    height: auto; /* 高さは自動調整 */
+  font-family: Arial, sans-serif;
+  background-color: #FFD700; /* 明るい黄色の背景 */
+  margin: 0;
+  padding: 0;
 }
 
 .qa-container {
-    max-width: 33.33%; /* 幅を画面の1/3に設定 */
-    margin: 0 auto; /* 中央揃え */
-    padding: 0 20px; /* 少しパディングを追加して余白を作る */
+  max-width: 800px; /* デスクトップでの最大幅 */
+  margin: auto;
+  padding: 20px;
 }
 
 .qa-item {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: left;
-    margin-bottom: 20px;
-    box-sizing: border-box;
+  background-color: white;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
 .question {
-    font-size: 18px;
-    cursor: pointer;
-    margin: 0;
+  cursor: pointer; /* 質問部分にカーソルを合わせた際に、クリック可能であることを示す */
 }
 
+/* 答えをデフォルトで非表示 */
 .answer {
-    font-size: 16px;
-    display: none;
-    margin-top: 10px;
-    color: #555;
+  display: none;
 }
 
-.question:hover {
-    color: #007​⬤
+/* hidden クラスを外すと表示される */
+.answer.hidden {
+  display: block;
+}
+
+/* スマホ用スタイル */
+@media (max-width: 600px) {
+  .qa-container {
+    padding: 0; /* コンテナのパディングを無くして全体表示に */
+    margin: 0; /* 余白を無くして全体を使用 */
+    width: 100%; /* コンテナを画面全体の幅に広げる */
+  }
+
+  .qa-item {
+    margin: 0 0 20px 0;  /* 上下はスペースを保持し、横方向の余白を無くす */
+    border-radius: 0; /* ボーダーの丸みを無くすことで画面いっぱいに */
+    padding: 15px; /* パディングを少し減らす */
+  }
+
+  body {
+    padding: 0; /* ボディ全体の余白を無くして全体を使う */
+  }
+  
+  img {
+    max-width: 100%; /* 画像が画面に収まるように */
+    height: auto;    /* 縦横比を保ったままリサイズ */
+  }
+}
