@@ -5,12 +5,18 @@ body {
   margin: 0;
   padding: 0;
 }
+.logo {
+  margin-top: 20px; /* 上部に少し余白を設ける */
+}
 
+.logo img {
+  width: 120px; /* ロゴの幅を小さく調整 */
+  height: auto; /* 縦横比を保つ */
+}
 .qa-container {
   max-width: 800px; /* デスクトップでの最大幅 */
   margin: auto;
   padding: 20px;
-  text-align: center; /* ロゴを中央に配置 */
 }
 
 .qa-item {
