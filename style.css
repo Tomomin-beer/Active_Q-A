@@ -10,6 +10,7 @@ body {
   max-width: 800px; /* デスクトップでの最大幅 */
   margin: auto;
   padding: 20px;
+  text-align: center; /* ロゴを中央に配置 */
 }
 
 .qa-item {
